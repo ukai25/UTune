@@ -1,0 +1,22 @@
+<%- include("../partials/header-ls.ejs") %>
+
+<div class="block__signup">
+    <h1 class="head_ls">UTune Artist</h1>
+    <form action="/artist/signup" method="POST" enctype='multipart/form-data'>
+        <div class="section"> 
+            <label>Full Name : </label> 
+            <input type="text" name="fullname" required>
+            <label>Email : </label> 
+            <input type="text" name="email" required>
+            <label>Username : </label> 
+            <input type="text" name="username" >
+            <label>Password : </label> 
+            <input type="password" name="password" >
+            <button type="submit">Sign Up</button> 
+            Already Have Account <a class="login" href="/artist/login"> Log In Now </a> 
+        </div> 
+    </form>   
+</div>
+
+
+<%- include("../partials/nofooter.ejs") %>

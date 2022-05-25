@@ -1,0 +1,46 @@
+<%- include("../partials/header-t.ejs") %>
+
+<div class="content">
+    <img src="./image/trending.jpg" alt="home1" class="img">
+    <div class="trending">
+        <div class="list">
+            <p>Top Hit</p>
+        </div>
+        <div class="line-1"></div>
+        <div class="list__song">
+        <% trending.forEach(function(trending){ %>
+            <div class="song__hit">
+                <a href="<%= trending._id %>" class="link">
+                    <img src= "<%= trending.cover %>" class="song_pro" href="/song/<%= trending._id %>">
+                </a>
+                <a class="song__title"><%= trending.title %></a><br>
+                <a class="song__artist"><%= trending.artist %></a>
+                <img src="./image/play.png" id="icon" class="song__play">
+                <audio id="mySong">
+                    <source src="<%= trending.music %>" type="audio/mp3">
+                </audio>
+            </div>
+        <% }); %>
+        </div>
+       
+                
+        <script>
+            var mySong = document.querySelectorAll("#mySong");
+            var icon = document.querySelectorAll("#icon");
+            
+            for(let i=0;i<5;i++){
+                icon[i].addEventListener('click',function(){
+                    if(mySong[i].paused){
+                        mySong[i].play();
+                        icon[i].src = "./image/pause.png";
+                    } else {
+                        mySong[i].pause();
+                        icon[i].src = "./image/play.png";
+                    }
+                }) 
+            }
+        </script>    
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

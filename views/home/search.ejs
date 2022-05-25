@@ -1,0 +1,42 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="content">
+    <div class="search__block">
+        <div class="list">
+            <p>Search</p>
+        </div>
+        <div class="line-1"></div>
+        <div class="list__search">
+        <% song.forEach(function(allSearch){ %>
+            <div class="song__hit">
+                <img src= "<%= allSearch.cover %>" class="song_pro">
+                <a class="song__title"><%= allSearch.title %></a><br>
+                <a class="song__artist"><%= allSearch.artist %></a>
+                <img src="./image/play.png" id="icon" class="song__play">
+                <audio id="mySong">
+                    <source src="<%= allSearch.music %>" type="audio/mp3">
+                </audio>
+            </div>
+        <% }); %>
+        </div>
+
+        <script>
+            var mySong = document.querySelectorAll("#mySong");
+            var icon = document.querySelectorAll("#icon");
+            
+            for(let i=0;i<5;i++){
+                icon[i].addEventListener('click',function(){
+                    if(mySong[i].paused){
+                        mySong[i].play();
+                        icon[i].src = "./image/pause.png";
+                    } else {
+                        mySong[i].pause();
+                        icon[i].src = "./image/play.png";
+                    }
+                }) 
+            }
+        </script>    
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

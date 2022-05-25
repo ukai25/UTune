@@ -1,0 +1,28 @@
+<%- include("../partials/header-ls.ejs") %>
+
+<div class="block__signup">
+    <h1 class="head_ls">UTune</h1>
+    <form action="/signup" method="POST" enctype='multipart/form-data'>
+        <div class="section"> 
+            <label>Full Name : </label> 
+            <input type="text" name="fullname" required>
+            <label>Email : </label> 
+            <input type="text" name="email" required>
+            <label>Username : </label> 
+            <input type="text" name="username" >
+            <label>Password : </label> 
+            <input type="password" name="password" >
+            <!-- <label>admincode : </label> 
+            <input type="text" name="admincode" > -->
+            <label class="form-label">Profile image :</label>
+            <input type="file" name="profileImage" accept="image/*">
+            <br>
+            <br>
+            <button type="submit">Sign Up</button> 
+            Already Have Account <a class="login" href="/login"> Log In Now </a> 
+        </div> 
+    </form>   
+</div>
+
+
+<%- include("../partials/nofooter.ejs") %>

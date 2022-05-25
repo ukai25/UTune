@@ -1,0 +1,18 @@
+<%- include("../partials/header-ls.ejs") %>
+
+<div class="block__login">
+    <h1 class="head_ls">UTune Artist</h1>
+    <form action="/artist/login" method="POST">
+        <div class="section"> 
+            <label>Username : </label> 
+            <input type="text" name="username" required>
+            <label>Password : </label> 
+            <input type="password" name="password" required>
+            <button type="submit">Log In</button> 
+            Don't have an account? <a class="signup" href="/artist/signup"> Sign Up Now </a> 
+        </div> 
+    </form>   
+</div>
+
+
+<%- include("../partials/nofooter.ejs") %>

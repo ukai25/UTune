@@ -1,0 +1,25 @@
+<%- include("../partials/header-pro.ejs") %>
+<div class="content">
+    <form action="/user/<%= currentUser._id %>/edit" method="POST" enctype='multipart/form-data'>
+        <div class="block">
+            <h1 class="head_pro">User profile</h1>
+            <div class="img_pro">
+                <p>
+                    <img src="<%= user.profileImage %>" class="image">
+                </p>
+            </div>
+            <div class="info">
+                <p><input type="file" name="profileImage" accept="image/*" class="upload"></p>
+                <p>
+                    <button type="submit">Save profile</button>
+                </p>
+                 
+            </div>
+            
+        </div>
+        
+    </form>
+    
+</div>
+
+<%- include("../partials/nofooter.ejs") %>

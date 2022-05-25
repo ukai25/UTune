@@ -1,0 +1,59 @@
+footer{
+    margin-top: 3%;
+    text-align: center;
+    background-color: #781717;
+    color: white;
+}   
+
+.song__footer{
+    width: 1000px;
+    height: 70px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    overflow: hidden;
+    margin-top: 4%;
+    margin-left: 20px;
+    padding-left: 10%;
+}
+.song_pro_footer{
+    object-fit: cover;
+    border: 3px solid rgb(59, 50, 50) ;
+    height: 50px;
+    margin-top: 7px;
+}
+.song__title_footer{
+    left: 5%;
+    top: -35px;
+    position: relative;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.song__artist_footer{
+    left: 3.8%;
+    top: -35px;
+    position: relative;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.song__play_footer{
+    height: 30px;
+    width: 30px;
+    float: left;
+    padding: 1%;
+    top: -55px;
+    position: relative;
+}
+
+
+.song__vol_footer{
+    height: 30px;
+    width: 30px;
+    float: right;
+    padding-right: -40px;
+    top: -50px;
+    position: relative;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utune</title> 
+    <link rel="stylesheet" type="text/css" href="/stylesheet/main.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/home.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/loginsignup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Mochiy+Pop+P+One&family=Prompt:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="fixed-nav-bar">
+    <div class="topnav">
+      <a class="head"> UTune Artist</a>
+      <% if(error && error.length>0){ %>
+        <div role = 'alert'>
+          <a class="head"><%=  error %></a>
+        </div>
+      <% } %>
+      <% if(success && success.length>0){ %>
+        <div role = 'alert'>
+          <a class="head"><%=  success %></a>
+        </div>
+      <% } %>
+      <% if (!currentUser) { %>
+        <div style="float:right">
+          <a class="line">|</a>
+          <a class="head" href="/login">Log In</a>
+          <a class="line">|</a>
+          <a class="head" href="/signup">Sign Up</a>
+          <a class="line">|</a>
+        </div>
+        <% } else { %>
+          <div style="float:right">
+            <a class="head" ><%= currentUser.status %></a>
+            <a class="line">|</a>
+            <a class="head" href="/user/<%= currentUser._id %>"> <%= currentUser.fullname %> </a>
+            <a class="line">|</a>
+            <a class="head" href="/logout">Log out</a>
+            <a class="line">|</a>
+          </div>
+        <% } %>
+    </div>
+
+  </div>

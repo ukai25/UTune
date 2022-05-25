@@ -1,0 +1,43 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="content">
+    <img src="./image/Home1.jpg" alt="home1" class="img">
+    <div class="script">
+        <p>UTune | Anachak Kan Fang Pleng Haeng Mai Thi Sang Ma Phuea Khon Run Mai Nha </p>
+        <p>Wep Thi Suai Ngan Tae Mai Thao Khon Tham Phro Khon Tham Suai Thisut Kha</p>
+    </div>
+    <div class="sign_up">
+        <a class="sign_up_now" href="/signup">Sign Up Now</a>
+    </div>
+    <br>
+    <div>
+        <a href="/trending">
+            <img class="trending img" src="./image/trending-home.jpg" alt="trending-home1" >
+        </a>
+    </div>
+    
+    <br>
+    <div class="new-artist">
+        <div class="artist">
+            <p>New Artists</p>
+        </div>
+        <div class="line-1"></div>
+        <div class="artist__block">
+        <% artist.forEach(function(art){ %>
+            <div class="block__show"> 
+                <img src= "<%= art.img %>" class="art_pro"><br> 
+                <strong><%= art.fullname %></strong><p></p>
+                <p><%= art.album %></p>
+            </div>    
+        <% }); %>
+        </div>
+    </div>
+    <div>
+        <a href="/artist">
+            <img class="img__artist" src="./image/create.jpg" alt="create-artist" >
+        </a>
+    </div>
+    
+</div>
+
+<%- include("../partials/footer.ejs") %>

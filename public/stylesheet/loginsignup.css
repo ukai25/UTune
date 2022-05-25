@@ -1,0 +1,110 @@
+.block__signup, .block__artist{
+    display: block;
+    width: 30%;
+    background-color: #781717;
+    left:50%;
+    top: 55%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    margin:0;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.block__login{
+    display: block;
+    width: 30%;
+    background-color: #781717;
+    left:50%;
+    top: 45%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    margin:0;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.head_ls{
+    text-align: center;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.section{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+button { 
+    float: left;
+    position: relative;
+    left: 37.5%;
+    background-color: #F0FF67; 
+    width: 20%;
+    color: #781717; 
+    padding: 10px; 
+    margin: 10px; 
+    margin-top: 40px;
+    border: none; 
+    border-radius: 30px;
+    cursor: pointer; 
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+} 
+
+.cap{
+    text-align: center;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+input[type=text], input[type=password] { 
+     width: 100%; 
+     margin: 8px 0;
+     padding: 12px 20px; 
+     display: inline-block;  
+     box-sizing: border-box; 
+}
+
+button:hover { 
+     opacity: 0.7; 
+ } 
+
+.login{
+    text-decoration: none;
+    color: #F0FF67;
+}
+
+.signup{
+    text-decoration: none;
+    color: #F0FF67;
+}
+
+.button_login, .button_signup{
+    display: block;
+    width: 20%;
+    background-color: #F0FF67;
+    color: #781717;
+    float: left;
+    text-align: center;
+    left: 27%;
+    top: 40%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}

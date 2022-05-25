@@ -1,0 +1,26 @@
+<%- include("../partials/header-art.ejs") %>
+
+<div class="content">
+    <div class="block__artist">
+        <h1 class="head_ls">UTune Artist</h1>
+        <form action="/artist/home" method="POST" enctype='multipart/form-data'>
+            <div class="section"> 
+                <label>Image : </label> 
+                <input type="file" accept="image/*" name="cover" id="fileToUpload" required>
+                <br>
+                <label>MP3 : </label> 
+                <input type="file" accept="audio/*,.aif,.aiff" name="audio" required>
+                <br>
+                <label>tittle : </label> 
+                <input type="text" name="tittle" required>
+                <br>
+                <label>Lyrics : </label> 
+                <textarea name="lyrics" id="lyrics" cols="40" rows="15" placeholder="Song lyrics"></textarea>
+                <button type="submit">Add Music</button> 
+            </div> 
+        </form>  
+    </div>    
+    
+</div>
+
+<%- include("../partials/nofooter.ejs") %>
